@@ -1,0 +1,67 @@
+// BELIEVE SECTION
+
+.believe {
+  background: $black url('../images/believe-bg.png');
+  background-position: 50% 50%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  z-index: 0;
+  @include breakpoint(Mdown) {
+    padding: 60px 20px;
+  }
+  svg.believe-bg {
+    display: block;
+    margin: auto;
+    position: absolute;
+  }
+  &-wrapper {
+    width: 80vw;
+    z-index: 3;
+    @include breakpoint(Mdown) {
+      height: 62vh;
+      width: 100%;
+      margin: 0 20px;
+    }
+    @include breakpoint(Sdown) {
+      height: 42vh;
+    }
+    @include breakpoint(XSdown) {
+      height: auto;
+      margin-top: 20px;
+    }
+    .believe-subheader {
+      span {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $blue;
+        background: $black;
+        padding: 0 20px;
+        @include breakpoint(Mdown) {
+          font-size: 14px;
+        }
+      }
+    }
+    .js-rotating-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $blue;
+      border-radius: 6px;
+      padding: 40px;
+      font-size: 40px;
+      font-weight: 100;
+      margin-top: -12px;
+      margin-bottom: 60px;
+      min-height: 228px;
+      @include breakpoint(Mdown) {
+        font-size: 25px;
+        min-height: 116px;
+      }
+    }
+  }
+}

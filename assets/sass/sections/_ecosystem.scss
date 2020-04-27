@@ -1,0 +1,135 @@
+// ECOSYSTEM SECTION
+
+.ecosystem {
+  background: $black;
+  z-index: 0;
+  &-left {
+    color: $white;
+    background: $black;
+    position: relative;
+    a {
+      margin-top: 40px;
+      @include breakpoint(Mdown) {
+        margin-left: 40px;
+      }
+    }
+    video {
+      position: absolute;
+      right: -72px;
+      bottom: 0;
+      width: 130%;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      @include breakpoint(Mdown) {
+        width: 100%;
+        right: 0;
+      }
+    }
+  }
+  &-right {
+    flex-wrap: wrap;
+    position: relative;
+    @include breakpoint(Mdown) {
+      padding: 0 20px;
+      width: auto;
+    }
+    .ecosystem-block {
+      color: $white;
+      margin: 10px;
+      text-align: center;
+      text-shadow: 0 1px 1px rgba(81,75,154,0.70);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid;
+      transition: all 200ms ease;
+      border-radius: 6px;
+      flex-grow: 1;
+      width: 80%;
+      @include breakpoint(Mdown) {
+        padding: 40px 0;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .blurb {
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(Mdown) {
+          height: auto;
+        }
+        img {
+          transition: .3s ease-out;
+        }
+        h3 {
+          font-size: 30px;
+          margin: 0;
+          transition: .3s ease-out;
+          @include breakpoint(Mdown) {
+            font-size: 24px;
+            margin: 0;
+          }
+        }
+        p {
+          margin: 10px 0 0 0;
+          font-size: 16px;
+          line-height: 13px;
+          transition: .3s ease-out;
+          text-align: left;
+          text-align: center;
+          @include breakpoint(Mdown) {
+            line-height: 24px;
+            text-align: center;
+          }
+          strong {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: block;
+          }
+        }
+      }
+      &:hover {
+        // h3 {
+        //   transform: translateY(-20%);
+        //   color: $white;
+        // }
+      }
+      &-1 {
+        border-color: $purple;
+        h3 {
+          color: $purple;
+        }
+      }
+      &-2 {
+        border-color: $lightpurple;
+        h3 {
+          color: $lightpurple;
+        }
+      }
+      &-3 {
+        border-color: $darkblue;
+        h3 {
+          color: $darkblue;
+        }
+      }
+      &-4 {
+        border-color: $blue;
+        h3 {
+          color: $blue;
+        }
+      }
+      &-5 {
+        border-color: $brightblue;
+        h3 {
+          color: $brightblue;
+        }
+      }
+
+    }
+  }
+}

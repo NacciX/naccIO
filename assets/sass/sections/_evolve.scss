@@ -1,0 +1,119 @@
+// SHIFT SECTION
+
+.evolve {
+  background: $black;
+  overflow: hidden;
+  z-index: 0;
+  color: $white;
+  @include breakpoint(Mdown) {
+    flex-direction: row;
+  }
+  @include breakpoint(Sdown) {
+    flex-direction: column;
+  }
+  svg.evolve-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  &-left {
+    @include breakpoint(Mdown) {
+      width: 40vw;
+    }
+    @include breakpoint(Sdown) {
+      width: 100vw;
+      padding-bottom: 0;
+    }
+    &-intro {
+      @include breakpoint(Mdown) {
+        width: 40vw;
+      }
+      @include breakpoint(Sdown) {
+        width: 100vw;
+      }
+    }
+  }
+  &-right {
+    @include breakpoint(Mdown) {
+      width: 60vw;
+    }
+    @include breakpoint(Sdown) {
+      width: 100vw;
+      padding-top: 0;
+    }
+    &-intro {
+      display: flex;
+      @include breakpoint(XSdown) {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 0;
+        @include breakpoint(XSdown) {
+          font-size: 24px;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        max-width: 200px;
+      }
+      .one {
+        text-align: right;
+        padding: 0 30px;
+        margin-top: 50px;
+        transition: .4s ease-out;
+        @include breakpoint(XSdown) {
+          text-align: center;
+          margin-top: 0;
+          padding: 0;
+        }
+      }
+      .two {
+        margin-top: 5px;
+        svg {
+          transform: rotate(32deg);
+          transition: .4s ease-out;
+        }
+      }
+      .three {
+        padding: 0 30px;
+        margin-top: 44px;
+        transition: .4s ease-out;
+        @include breakpoint(XSdown) {
+          margin-top: 20px;
+          padding: 0;
+        }
+      }
+    }
+    &:hover {
+      .evolve-right-intro {
+        .one {
+          margin-top: 100px;
+          @include breakpoint(XSdown) {
+            margin-top: 0;
+          }
+        }
+        .two {
+          svg {
+            transform: rotate(2deg);
+            @include breakpoint(XSdown) {
+              transform: rotate(32deg);
+            }
+          }
+        }
+        .three {
+          margin-top: 0;
+          @include breakpoint(XSdown) {
+            margin-top: 20px;;
+          }
+        }
+      }
+    }
+  }
+}

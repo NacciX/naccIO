@@ -1,0 +1,192 @@
+// MISSON SECTION
+
+.why {
+  background: $black;
+  position: relative;
+  z-index: 0;
+  color: $white;
+  &-left {
+    background: $black;
+    background-position: 100% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    a {
+      margin-top: 20px;
+      @include breakpoint(Mdown) {
+        margin-left: 40px;
+      }
+    }
+    @include breakpoint(Mdown) {
+      padding: 60px 0 20px;
+    }
+  }
+  &-right {
+    margin-top: 40px;
+    opacity: 0;
+    @include breakpoint(Mdown) {
+      margin-top: 0;
+      padding-top: 0
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 100;
+      font-size: 18px;
+      margin-bottom: 30px;
+      @include breakpoint(Sdown) {
+        font-size: 15px;
+      }
+    }
+    .data-stories {
+      display: flex;
+      @include breakpoint(Mdown) {
+        flex-direction: column;
+      }
+      .data-story {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        padding: 30px;
+        text-align: center;
+        @include breakpoint(Mdown) {
+          width: auto;
+          display: block;
+        }
+        &-1 {
+          background: $blue;
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+          @include breakpoint(Mdown) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+          }
+        }
+        &-2 {
+          background: $purple;
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          @include breakpoint(Mdown) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+          }
+        }
+        p {
+          @include breakpoint(Sdown) {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.blocker {
+  z-index: 9999;
+  @include breakpoint(Mdown) {
+    padding: 0 !important;
+  }
+  .modal {
+    max-width: 900px;
+    z-index: 9999;
+    margin-top: 40px;
+    padding: 0;
+    overflow: hidden;
+    @include breakpoint(Mdown) {
+    margin-top: 20px;
+    }
+    a.close-modal {
+      top: 10px;
+      right: 10px;
+    }
+    div {
+      padding: 60px;
+      @include breakpoint(Mdown) {
+        padding: 40px 20px;
+      }
+      &.vidage {
+        padding: 0;
+      }
+    }
+    p {
+      margin-top: 0.5rem;
+      @include breakpoint(Mdown) {
+        margin: 10px 0 0;
+      }
+    }
+    h4 {
+      margin: 0;
+      font-size: 26px;
+    }
+    img {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+    video {
+      width: 100%;
+    }
+    .megacities {
+      position: relative;
+      padding: 0;
+      margin-top: 40px;
+      padding: 0;
+      span {
+        width: 100%;
+        height: 21px;
+        background: $white;
+        top: 0;
+        position: absolute;
+        @include breakpoint(XSdown) {
+          height: 14px;
+        }
+      }
+      img {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.grey-bg {
+  background: #f1f1f1;
+}
+
+.why-ready {
+  opacity: 1;
+}
+
+.slick-slider {
+  p {
+    @include breakpoint(Mdown) {
+      margin-left: 0;
+    }
+  }
+}
+
+.slick-prev, .slick-next {
+  &:before {
+    // color: $white !important;
+    font-size: 25px !important;
+  }
+}
+
+.slick-prev {
+  left: -50px !important;
+  @include breakpoint(Mdown) {
+    left: -20px !important;
+  }
+}
+
+.slick-next {
+  right: -50px !important;
+  @include breakpoint(Mdown) {
+    right: -20px !important;
+  }
+}
